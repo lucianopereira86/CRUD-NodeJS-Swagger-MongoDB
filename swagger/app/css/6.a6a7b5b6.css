@@ -1,0 +1,1 @@
+.slide-left-enter-active{-webkit-transition:all .5s ease;transition:all .5s ease}.slide-left-enter,.slide-left-leave-to{-webkit-transform:translateX(500px);transform:translateX(500px)}.slide-right-enter-active{-webkit-transition:all .5s ease;transition:all .5s ease}.slide-right-enter{-webkit-transform:translateX(-500px);transform:translateX(-500px)}
