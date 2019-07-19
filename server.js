@@ -47,7 +47,10 @@ swagger.configureSwaggerPaths('', 'api-docs', '');
 // Configure the API domain
 var domain = 'localhost';
 if (argv.domain !== undefined) domain = argv.domain;
-else console.log('No --domain=xxx specified, taking default hostname "localhost".');
+else
+	console.log(
+		'No --domain=xxx specified, taking default hostname "localhost".'
+	);
 
 // Configure the API port
 var port = 8080;
@@ -65,9 +68,9 @@ const uri = 'mongodb://127.0.0.1:27017/crud';
 MongoClient.connect(uri, (err, client) => {
 	if (err) return console.log(err);
 	db = client.db('crud');
-	
+
 	app.use('/api/v1/users', usersCtrl);
-	
+
 	app.listen(3000, function() {
 		console.log('server running on port 3000', '');
 	});

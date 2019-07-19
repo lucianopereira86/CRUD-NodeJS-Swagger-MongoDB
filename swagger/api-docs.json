@@ -97,38 +97,31 @@
 					{
 						"name": "_id",
 						"in": "query",
-						"properties": {
-							"_id": {
-								"$ref": "#/definitions/_id"
-							}
-						}
+						"type": "string",
+						"description": "Collection ID",
+						"example": "5c0728badc70ea3dec00d8e6",
+						"defaultValue": ""
 					},
 					{
 						"name": "profile_id",
 						"in": "query",
-						"properties": {
-							"_id": {
-								"$ref": "#/definitions/profile_id"
-							}
-						}
+						"type": "number",
+						"description": "Profile ID (1 = ADMIN, 2 = CLIENT)",
+						"example": 1
 					},
 					{
 						"name": "username",
 						"in": "query",
-						"properties": {
-							"_id": {
-								"$ref": "#/definitions/username"
-							}
-						}
+						"type": "string",
+						"description": "User logon",
+						"example": "LUCIANO"
 					},
 					{
 						"name": "password",
 						"in": "query",
-						"properties": {
-							"_id": {
-								"$ref": "#/definitions/password"
-							}
-						}
+						"type": "string",
+						"description": "User password",
+						"example": "1234"
 					}
 				],
 				"responses": {
@@ -150,13 +143,11 @@
 				"parameters": [
 					{
 						"name": "_id",
-						"required": ["_id"],
 						"in": "query",
-						"properties": {
-							"_id": {
-								"$ref": "#/definitions/_id"
-							}
-						}
+						"required": true,
+						"type": "string",
+						"description": "Collection ID",
+						"example": "5c0728badc70ea3dec00d8e6"
 					}
 				],
 				"responses": {
@@ -175,13 +166,11 @@
 	},
 	"definitions": {
 		"_id": {
-			"required": true,
 			"type": "string",
 			"description": "Collection ID",
 			"example": "5c0728badc70ea3dec00d8e6"
 		},
 		"profile_id": {
-			"required": true,
 			"type": "number",
 			"description": "Profile ID (1 = ADMIN, 2 = CLIENT)",
 			"example": 1
@@ -203,7 +192,7 @@
 				"msg": {
 					"type": "string",
 					"description": "Error message",
-					"example": "PARAMETER [x] NOT INFORMED"
+					"example": "User not found"
 				}
 			}
 		},

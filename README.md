@@ -8,10 +8,6 @@ A simples CRUD example by using NodeJS, Swagger UI and MongoDB.
 - Swagger UI
 - MongoDB
 
-## Online project in
-
-- [APICRUD](https://apicrud-nodejs-swagger-mongodb.herokuapp.com/swagger)
-
 ## To run this project
 
 - Install packages:
